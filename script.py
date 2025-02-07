@@ -3,12 +3,14 @@
 req = None
 tema = None
 pol = None
+country = None
 while True:
     if req == None:
         print('\n1. Выберите тему')
         print('2. Выбрать пол')
         print('3. Досье')
         print('4. Выход')
+        print('5. Выберите страну')
     elif req == '1':
         while True:
             print('1. Темная')
@@ -44,21 +46,40 @@ while True:
                 break
             else:
                 print('Вы выбрали белеберду')
-        continue    
+        continue
     elif req == '3':
         print(f'\nВаша тема: {tema}')
         print(f'Ваш пол: {pol}')
+        print(f'Ваша страна: {country}')
         req = None
         continue
     elif req == '4':
-        status_code = 0
-        if tema == None or pol == None:
-            status_code = 1
-        exit(status_code)
+        exit()
+    elif req == '5':
+        while True:
+            print('1. Россия\n2. Белоруссия\n3. США')
+            req = input('\nВыберети страну: ')
+            if req == '1':
+                print('Вы россиянин')
+                req = None
+                country = 'Россия'
+                break
+            elif req == '2':
+                print('Вы белорус')
+                req = None
+                country = 'Белоруссия'
+                break
+            elif req == '3':
+                print('Вы американец')
+                req = None
+                country = 'Америка'
+                break
+            else:
+                print('Вы выбрали белеберду')
+        continue
     else:
         print('Вы ввели белеберду')
-        req = None 
+        req = None
         continue
-        
+
     req = input('\nВыберите пункт меню: ')
-    
