@@ -48,9 +48,7 @@ while True:
                 print('Вы выбрали белеберду')
         continue
     elif req == '3':
-        print(f'\nВаша тема: {tema}')
-        print(f'Ваш пол: {pol}')
-        print(f'Ваша страна: {country}')
+        print(f'\nВаша тема: {tema}\nВаш пол: {pol}\nВаша страна: {country}')
         req = None
         continue
     elif req == '4':
